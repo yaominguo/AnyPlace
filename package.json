@@ -1,0 +1,26 @@
+{
+  "name": "anyplace",
+  "version": "1.0.0",
+  "description": "tiny nodejs web server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .", 
+    "fix": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaominguo/AnyPlace.git"
+  },
+  "author": "Max Kwok",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yaominguo/AnyPlace/issues"
+  },
+  "homepage": "https://github.com/yaominguo/AnyPlace#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.13.1",
+    "pre-commit": "^1.2.2"
+  }
+}
