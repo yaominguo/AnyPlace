@@ -5,7 +5,7 @@ module.exports = {
         "mocha":true
     },
     "extends": "eslint:recommended",
-    // "parser":"babel-eslint",
+    "parser":"babel-eslint",
     "parserOptions":{
         "ecmaVersion":6,
         "sourceTYpe":"script"
@@ -18,7 +18,7 @@ module.exports = {
         }],
         "indent": [
             "error",
-            "tab"
+            "0"
         ],
         "linebreak-style": [
             "error",

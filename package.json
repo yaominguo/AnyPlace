@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .", 
+    "lint": "eslint .",
     "fix": "eslint --fix ."
   },
   "repository": {
@@ -22,5 +22,8 @@
     "babel-eslint": "^8.0.3",
     "eslint": "^4.13.1",
     "pre-commit": "^1.2.2"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0"
   }
 }
