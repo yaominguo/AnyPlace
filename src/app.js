@@ -4,6 +4,7 @@ const path = require('path');
 const route = require('./route');
 const conf = require('./config/defaultConfig');
 
+
 const server = http.createServer((req, res) => {
 	const filePath = path.join(conf.root, req.url);
 	route(req, res, filePath);

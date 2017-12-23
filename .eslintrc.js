@@ -17,8 +17,8 @@ module.exports = {
             "allow":["warn","error","info"]//允许console.warn等
         }],
         "indent": [
-            "error",
-            "0"
+            "off",
+            "tab"
         ],
         "linebreak-style": [
             "error",
