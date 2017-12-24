@@ -15,3 +15,4 @@ module.exports = (rs, req, res) => {
 		return rs.pipe(createDeflate());
 	}
 };
+

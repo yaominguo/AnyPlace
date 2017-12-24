@@ -2,7 +2,10 @@
   "name": "anyplace",
   "version": "1.0.0",
   "description": "tiny nodejs web server",
-  "main": "index.js",
+  "main": "src/app.js",
+  "bin": {
+    "anyplace": "bin/anyplace"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
@@ -25,6 +28,8 @@
   },
   "dependencies": {
     "chalk": "^2.3.0",
-    "handlebars": "^4.0.11"
+    "handlebars": "^4.0.11",
+    "yargs": "^10.0.3"
   }
 }
+

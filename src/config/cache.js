@@ -42,3 +42,4 @@ module.exports = function isFresh(stats, req, res) {
 
 	return true;
 };
+
