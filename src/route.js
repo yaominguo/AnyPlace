@@ -8,6 +8,7 @@ const config = require('./config/defaultConfig');
 const mime = require('./config/mime');
 const compress = require('./config/compress');
 const range = require('./config/range');
+const isFresh = require('./config/cache');
 
 const tplPath = path.join(__dirname, './template/dir.tpl');
 const source = fs.readFileSync(tplPath);
@@ -18,6 +19,14 @@ module.exports = async function (req, res, filePath) {
 		if (stats.isFile()) {
 			const contentType = mime(filePath);
 			res.setHeader('Content-Type', contentType);
+
+			// 如果有缓存
+			if (isFresh(stats, req, res)) {
+				res.statusCode = 304;
+				res.end();
+				return;
+			}
+
 			let rs;
 			const {
 				code,
@@ -30,7 +39,7 @@ module.exports = async function (req, res, filePath) {
 				res.statusCode = 200;
 				rs = fs.createReadStream(filePath);
 			} else {
-				res.statusCode = 206;//206告诉你为这只是部分内容
+				res.statusCode = 206; //206告诉你为这只是部分内容
 				rs = fs.createReadStream(filePath, {
 					start: start,
 					end: end
